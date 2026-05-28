@@ -2,7 +2,7 @@ CREATE DATABASE tasksSystem;
 USE tasksSystem;
 
 CREATE TABLE Companies(
-	Id int,
+	Id int NOT NULL AUTO_INCREMENT,
     CompanyName varchar(255),
     Pwd varchar(255),
     IsActive int,
@@ -10,7 +10,7 @@ CREATE TABLE Companies(
 );
 
 CREATE TABLE Users(
-	Id int,
+	Id int NOT NULL AUTO_INCREMENT,
     FullName varchar(255),
     Email varchar(255),
     CreatedAt date,
@@ -20,7 +20,7 @@ CREATE TABLE Users(
 );
 
 CREATE TABLE TaskStatus(
-	Id int,
+	Id int NOT NULL AUTO_INCREMENT,
     StatusName varchar(255),
     IsActive int,
     Companie int,
@@ -32,7 +32,7 @@ CREATE TABLE TaskStatus(
 );
 
 CREATE TABLE Tasks(
-	Id int,
+	Id int NOT NULL AUTO_INCREMENT,
     Title varchar(255),
     TaskDescription varchar(255),
     StatusId int,
