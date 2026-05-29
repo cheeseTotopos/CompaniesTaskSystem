@@ -1,13 +1,13 @@
-using System.ComponentModel.DataAnnotations.Schema;
+using System.ComponentModel.DataAnnotations;
 
-[Table("Users")]
-public class User()
+public class UserDTO()
 {
     public int Id {get; set;}
+    [Required]
     public string FullName {get; set;} = string.Empty;
+    [Required]
+    [EmailAddress]
     public string Email {get; set;} = string.Empty;
-    public DateOnly CreatedAt {get; set;}
-
-    [Column("Companie")]
+    [Required]
     public int CompanyId {get; set;}
 }
