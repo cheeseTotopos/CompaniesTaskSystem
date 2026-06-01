@@ -35,6 +35,7 @@ CREATE TABLE Tasks(
 	Id int NOT NULL AUTO_INCREMENT,
     Title varchar(255),
     TaskDescription varchar(255),
+    CompanyId int,
     StatusId int,
     IsPriority int,
     DueDate date,
@@ -42,6 +43,7 @@ CREATE TABLE Tasks(
     UserId int,
     
     PRIMARY KEY (Id),
+    FOREIGN KEY (CompanyId) REFERENCES Copmanies(Id),
     FOREIGN KEY (StatusId) REFERENCES TaskStatus(Id),
     FOREIGN KEY (CreatedBy) REFERENCES Users(Id),
     FOREIGN KEY (UserId) REFERENCES Users(Id)

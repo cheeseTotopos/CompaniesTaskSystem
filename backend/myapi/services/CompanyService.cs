@@ -35,7 +35,7 @@ public class CompanyService(AppDBConection _conn)
                 Data = new {companyId = company.Id}
             };
     }
-
+    
     public async Task<bool> CompanyExist(string name)
     {
         var exists = await _conn.Companies.AnyAsync(c => c.CompanyName == name);

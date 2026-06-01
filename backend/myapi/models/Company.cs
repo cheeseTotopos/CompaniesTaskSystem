@@ -13,6 +13,9 @@ public class Company
     public string Pwd {get; set;} = string.Empty;
     public int IsActive {get; set;}
 
+    public ICollection<TaskStatus> TaskStatus = new List<TaskStatus>();
+    public ICollection<Task> Tasks = new List<Task>();
+
     //empty constructor needed for using entity framwork
     public Company(){}
 }

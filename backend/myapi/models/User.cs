@@ -10,4 +10,7 @@ public class User()
 
     [Column("Companie")]
     public int CompanyId {get; set;}
+    public ICollection<TaskStatus> TaskStatus = new List<TaskStatus>();
+    public ICollection<Task> CreatedTask = new List<Task>();
+    public ICollection<Task> AssignedTask = new List<Task>();
 }

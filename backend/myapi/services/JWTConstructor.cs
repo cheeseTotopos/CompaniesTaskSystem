@@ -28,7 +28,7 @@ public class JWTConstructor(IConfiguration conf)
             issuer: "http://myapi",
             audience: "http://myfrontend", 
             claims: claims,
-            expires: DateTime.Now.AddMinutes(4),
+            expires: DateTime.Now.AddMinutes(10),
             signingCredentials: signed
         );
 

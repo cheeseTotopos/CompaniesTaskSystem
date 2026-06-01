@@ -87,4 +87,25 @@ public class UserService(AppDBConection _conn, CompanyService _cs)
             Data = user
         };
     }
+
+    public async Task<ResponseFormat<User?>> UserExists(int id)
+    {
+        var user = await _conn.Users.FirstOrDefaultAsync(u => u.Id == id);
+
+        var success = false;
+        if(user != null)
+            success = true;
+        return new ResponseFormat<User?>
+        {
+            Success = success,
+            Message = "",
+            Data = user
+        };
+    }
+
+    public async Task<bool> UserBelongsToCompany(int userid, int companyid)
+    {
+        var result = await _conn.Users.AnyAsync(u => u.Id == userid && u.CompanyId == companyid);
+        return result;
+    }
 }

@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 public class AuthController(UserService _us, JWTConstructor _jwtconstructor) : ControllerBase
 {
     [HttpPost("register")]
-    public async Task<IActionResult> Register(UserDTO data)
+    public async Task<IActionResult> Register([FromBody] UserDTO data)
     {
         var response = await _us.Register(data);
 
@@ -16,7 +16,7 @@ public class AuthController(UserService _us, JWTConstructor _jwtconstructor) : C
     }
 
     [HttpPost("login")]
-    public async Task<IActionResult> Login(UserDTO data)
+    public async Task<IActionResult> Login([FromBody] UserDTO data)
     {
         var result = await _us.Login(data);
         if(result.Success == false || result.Data == null)

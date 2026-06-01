@@ -9,6 +9,8 @@ builder.Services.AddControllers();
 builder.Services.AddScoped<CompanyService>();
 builder.Services.AddScoped<UserService>();
 builder.Services.AddScoped<JWTConstructor>();
+builder.Services.AddScoped<TaskStatusService>();
+builder.Services.AddScoped<TaskService>();
 
 
 builder.Services.AddEndpointsApiExplorer();

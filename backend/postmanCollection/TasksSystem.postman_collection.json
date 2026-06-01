@@ -1,0 +1,297 @@
+{
+  "info": {
+    "_postman_id": "6e2ab8ec-2546-4467-8b4d-67d8ea20ffe5",
+    "name": "TasksSystem",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "46982323",
+    "_collection_link": "https://go.postman.co/collection/46982323-6e2ab8ec-2546-4467-8b4d-67d8ea20ffe5?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "http://localhost:5149/company/register",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"CompanyName\": \"prueba27\",\r\n    \"Pwd\" : \"peito27\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5149/company/register",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5149",
+          "path": [
+            "company",
+            "register"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "http://localhost:5149/auth/register",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"FullName\": \"Iris Fehnrir Bermudez\",\r\n    \"Email\" : \"iris@quacom.com\",\r\n    \"CompanyId\" : \"4\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5149/auth/register",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5149",
+          "path": [
+            "auth",
+            "register"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "http://localhost:5149/auth/login",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"FullName\": \"hugo velazquez\",\r\n    \"Email\" : \"emailvalido@gmail.com\",\r\n    \"CompanyId\" : \"2\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5149/auth/login",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5149",
+          "path": [
+            "auth",
+            "login"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "http://localhost:5149/task_status/create",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwiZW1haWwiOiJlbWFpbHZhbGlkb0BnbWFpbC5jb20iLCJleHAiOjE3ODAxOTgyMjksImlzcyI6Imh0dHA6Ly9teWFwaSIsImF1ZCI6Imh0dHA6Ly9teWZyb250ZW5kIn0.cMIfg6o8Xrmd8RQtc3PjMc1Lv6855hlLbP44NRHKLVs",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"StatusName\" : \" pendientes\",\r\n    \"CompanyId\" : \"2\",\r\n    \"CreatedBy\" : \"1\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5149/task_status/create",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5149",
+          "path": [
+            "task_status",
+            "create"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "http://localhost:5149/task_status/edit",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwiZW1haWwiOiJlbWFpbHZhbGlkb0BnbWFpbC5jb20iLCJleHAiOjE3ODAxNjcwNTYsImlzcyI6Imh0dHA6Ly9teWFwaSIsImF1ZCI6Imh0dHA6Ly9teWZyb250ZW5kIn0.yupxOM39W98dJDKZoNhgfm2Vkzg665gxsBEJwCbui0U",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"Id\": \"2\",\r\n    \"NewName\" : \"cancelados\",\r\n    \"CompanyId\" : \"2\",\r\n    \"CreatedBy\" : \"1\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5149/task_status/edit",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5149",
+          "path": [
+            "task_status",
+            "edit"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "http://localhost:5149/task_status/getStatuses",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwiZW1haWwiOiJlbWFpbHZhbGlkb0BnbWFpbC5jb20iLCJleHAiOjE3ODAxOTgyMjksImlzcyI6Imh0dHA6Ly9teWFwaSIsImF1ZCI6Imh0dHA6Ly9teWZyb250ZW5kIn0.cMIfg6o8Xrmd8RQtc3PjMc1Lv6855hlLbP44NRHKLVs",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"companyId\" : \"2\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5149/task_status/getStatuses",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5149",
+          "path": [
+            "task_status",
+            "getStatuses"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "http://localhost:5149/tasks/create",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwiZW1haWwiOiJlbWFpbHZhbGlkb0BnbWFpbC5jb20iLCJleHAiOjE3ODAyNTQzMDcsImlzcyI6Imh0dHA6Ly9teWFwaSIsImF1ZCI6Imh0dHA6Ly9teWZyb250ZW5kIn0.dTS-LR6QTtd-ELEF_6PZ-F18yuxb1p-5Cfm05CQvucI",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"Title\" : \"Tercer Task\",\r\n    \"TaskDescription\" : \"Esta es una prueba del primer task ye\",\r\n    \"CompanyId\" : \"2\",\r\n    \"StatusId\" : \"3\",\r\n    \"IsPriority\" : 0,\r\n    \"DueDate\" : \"2026-05-31\",\r\n    \"CreatedBy\" : \"1\",\r\n    \"UserId\" : \"1\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5149/tasks/create",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5149",
+          "path": [
+            "tasks",
+            "create"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "http://localhost:5149/tasks/get_tasks",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwiZW1haWwiOiJlbWFpbHZhbGlkb0BnbWFpbC5jb20iLCJleHAiOjE3ODAyNzUyOTksImlzcyI6Imh0dHA6Ly9teWFwaSIsImF1ZCI6Imh0dHA6Ly9teWZyb250ZW5kIn0.A3cESQyPRVJ7NWeFVP4dLspWIN0qBVkgZYrevzpPb3w",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"CompanyId\" : \"2\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5149/tasks/get_tasks",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5149",
+          "path": [
+            "tasks",
+            "get_tasks"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
